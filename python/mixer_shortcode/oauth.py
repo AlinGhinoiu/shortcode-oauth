@@ -75,6 +75,7 @@ class OAuthShortCode:
         address = self._grant.url('/oauth/token')
         payload = {
             'client_id': self._grant.client_id,
+            'client_secret': self._grant.client_secret,
             'grant_type': 'authorization_code',
             'code': body['code'],
         }
